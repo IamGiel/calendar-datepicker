@@ -1,0 +1,237 @@
+
+.d2picker-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-main, .button-main, .date-labels-main {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+}
+
+.date-labels-main {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 12px auto;
+    gap: 12px;
+}
+
+.dates-section {
+  display: flex;
+}
+
+.selected-days {
+  background-color: rgb(161, 208, 161);
+  color: white;
+  font-weight: 800;
+}
+
+.in-range,
+.will-be-in-range {
+  --background: rgba(159, 135, 135, 0.227);
+  color: rebeccapurple!important;
+  font-weight: 300;
+  border: 1px dashed rgb(111 154 151);
+  border-left: none;
+  border-right: none;
+}
+
+.range-start, .will-be-range-start {
+    border-right: none;
+    background-color: rgb(161, 208, 161);
+    border: 2px dashed rgb(111 154 151);
+    border-right: none;
+}
+
+.range-end, .will-be-range-end {
+  background-color: rgb(161, 208, 161);
+  border: 2px dashed rgb(111 154 151);
+  border-left: none;
+}
+
+
+
+/* .selected-days:hover {
+  background-color: slategray;
+  color: white;
+} */
+
+.inCurrentMonth {
+  visibility: hidden;
+}
+
+.cursor-not-allowed {
+  opacity: 0.5;
+  color: grey;
+}
+
+/* .regular-day {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 7px;
+} */
+
+.now {
+  border: 1px;
+  background: #2e82b3;
+  color: white;
+  font-weight: 800;
+}
+
+.month-btns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+.month-arr-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.day {
+    --border-color: rgb(51 65 85); /* slate-700 */
+    --in-range-bg: rgb(148 163 184); /* slate-400 */
+    --border-radius: 4px;
+}
+
+.will-be-in-range,
+.will-be-range-end,
+.will-be-range-start {
+  border-top: 1px dashed rgb(111 154 151);
+  border-bottom: 1px dashed rgb(111 154 151);
+}
+
+.will-be-range-end,
+.will-be-in-range:nth-child(7n),
+.will-be-range-start:nth-child(7n) {
+  border-right: 1px dashed var(--border-color);
+}
+
+.will-be-in-range:nth-child(7n+1),
+.will-be-range-start,
+.will-be-range-end:nth-child(7n+1) {
+  border-left: 1px dashed var(--border-color);
+}
+
+/* .in-range,
+.range-start,
+.range-end {
+  color: white;
+} */
+
+.in-range {
+  background-color: var(--background);
+}
+
+.will-be-in-range, .will-be-in-range:hover
+.in-range {
+  border-radius: 0 !important;
+  background-color: var(--background);
+  border-style: dashed;
+  border-left:none;
+  border-right:none;
+}
+
+
+/* .will-be-in-range:nth-child(7n),
+.in-range:nth-child(7n),
+.range-end,
+.will-be-range-end {
+  border-radius: 0 var(--border-radius) var(--border-radius) 0 !important;
+} */
+
+/* .will-be-in-range:nth-child(7n+1),
+.in-range:nth-child(7n+1),
+.range-start,
+.will-be-range-start {
+  border-radius: var(--border-radius) 0 0 var(--border-radius) !important;
+} */
+
+.range-start:nth-child(7n),
+.range-end:nth-child(7n+1),
+.will-be-range-start:nth-child(7n),
+.will-be-range-end:nth-child(7n+1) {
+  border-radius: var(--border-radius) !important;
+}
+
+.month-toggler {
+    position: relative;
+}
+
+.month-year-container {
+    position: relative;
+}
+
+.toggled-m-y-container {
+    position: absolute;
+    background: white;
+    border: 1px solid black;
+    padding: 12px;
+    margin: 12px;
+    min-width: 250px;
+}
+
+.csub-interval-selections {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #443030;
+  border: 1px solid black;
+}
+
+.select-btns:hover {
+  /* border: 1px solid grey; */
+  border-radius: 9px;
+  /* padding: 5px;
+  margin: 5px; */
+}
+.csub-calendar{
+  display: flex;
+  border: 1px solid black;
+  border-left: none;}
+
+.year-nav-section {
+  display: flex;
+}
+
+
+/* calendar css */
+.section-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  padding: 12px;
+  margin: 12px;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 5px;
+  margin: 5px;
+}
+
+/* .month-name {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin: 12px auto;
+} */
+
+.grid7 {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-row-gap: 2px;
+  justify-content: center;
+}
+

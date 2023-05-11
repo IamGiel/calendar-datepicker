@@ -1,0 +1,69 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    border: 2px solid #ddd;
+    max-width: 50px;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  .today {
+    background-color: #1101a16b;
+    color: white!important; 
+  }
+  .highlight {
+    color: black;
+    font-weight: 600;
+  }
+  .grayout {
+    color: #00000059;
+  }
+
+  .days {
+    cursor: pointer;
+  }
+
+  .days:hover {
+    border-top: 2px solid slategrey;
+    border-bottom: 2px solid slategrey;
+    border-left: 2px solid slategrey;
+    border-right: 2px solid slategrey;
+  }
+
+  .in-range {
+    /* border: 2px solid transparent; */
+    background-color: rgba(85, 107, 47, 0.529);
+  }
+
+  .start-date {
+    background-color: darkolivegreen;
+    color: white;
+  }
+  .end-date {
+    background-color: darkolivegreen;
+    color: white;
+  }
+  .start-end-dates {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding: 12px;
+    justify-content: space-evenly;
+  }
+  .date-picker-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .datep-top-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 12px;
+    margin: 12px;
+
+  }

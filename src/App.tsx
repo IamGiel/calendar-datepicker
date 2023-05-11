@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import { DatePicker2 } from './datepicker2/DatePicker2';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <DatePicker2 
+      pickertype={'range'} 
+      numCalendar={3}
+      // minStartDate={new Date()}
+      // maxEndDate={new Date("May 2, 2023")}
+     />
     </div>
   );
 }
