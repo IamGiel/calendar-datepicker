@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 
 interface ISelection {
-    onselect: (selection: number) => void;
+    onselect: (selection: number|null) => void;
 }
 export const Selection = (props:ISelection) => {
+    // useEffect(()=>{
+    //   props.onselect(null)
+    // },[])
     const onSelectedButton = (event:any, selection:any) => {
         console.log(event, selection)
         props.onselect(selection)

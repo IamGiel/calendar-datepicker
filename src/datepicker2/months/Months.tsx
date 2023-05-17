@@ -20,7 +20,7 @@ export const Months = (props:any) => {
         }
     } = useDatePickerContext();
     
-    const year = months[0].$date.getFullYear();
+    const year = months[1].$date.getFullYear();
     
     function handleMonthClick(month:any) {
       props.onMonthClick(month);

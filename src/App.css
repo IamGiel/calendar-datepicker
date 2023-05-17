@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+/* datepicker wrapper */
+.dp-wrapper {
+  display: flex
+}
+.selection {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+}
+.calendars-here {
+  display: flex;
+}
