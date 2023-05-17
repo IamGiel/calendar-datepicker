@@ -60,39 +60,30 @@ export const Root = (props: any) => {
   // props.selection = the group of days user selects
 
   const calendarSetting = () => {
-    console.log(props.selection)
-    console.log(selectedDates)
-    
-    if(props.selection){
-      let start = selectedDates[0]
-      let end = new Date(start.getTime() + props.selection * 24 * 60 * 60 * 1000)
-      selectedDates.splice(0, selectedDates.length)
-      if(props.selection===0){
-        setMonth(new Date())
-      }
-      selectedDates.push(start)
-      selectedDates.push(end)
-
+    if (props.selection === 0) {
+      setMonth(new Date());
+    }
+    if (props.selection) {
+      const start = selectedDates[0] || new Date();
+      const end = new Date(start.getTime() + props.selection * 24 * 60 * 60 * 1000);
+      
+      selectedDates.splice(0, selectedDates.length);
+      selectedDates.push(start, end);
+  
       
     }
-   
-    
-    const currentDate = new Date();
-    let startDate = currentDate.getTime();
-    let endDate =  new Date(currentDate.getTime() + props.selection * 24 * 60 * 60 * 1000)
-    
+
     calendars[1].days = calendars[1].days.map((currentDay: CalendarDay, id: any) => {
-      const iterDay = new Date(currentDay.$date)
-      if(currentDay.range === "will-be-range-start"){
-        return {...currentDay}
+      if (currentDay.range === "will-be-range-start") {
+        return { ...currentDay };
       } else {
-        return {...currentDay}
+        return { ...currentDay };
       }
-      
     });
     
-    setCalendar_(calendars[1])
+    setCalendar_(calendars[1]);
   };
+  
   
 
   const getFirstClicked = (date?: Date | undefined) => {
